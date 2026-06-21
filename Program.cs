@@ -57,9 +57,9 @@ public class Program
                 case 3:
                     EliminarEmpleado();
                     break;
-
+/*
                 case 4:
-                    VerEmpleados();
+                    VerEmpleados();*/
 
                 case 5:
                     Console.WriteLine("Ha elegido salir, gracias por utilizar gestor de voluntariados gatito");
@@ -114,5 +114,21 @@ public Voluntario(string nombre,int horasTrabajadas):base (nombre)
 
     }
 
-    
+    static public void EliminarEmpleado(){
+
+        int indiceDeEmpleadoAEliminar=0;
+
+        foreach (Empleado c in listaEmpleados){
+            indiceDeEmpleadoAEliminar++;
+            Console.WriteLine($"Empleado de nombre: {c.Nombre} tiene el número {indiceDeEmpleadoAEliminar}");
+        }
+
+        Console.WriteLine("Escriba el índice del empleado que desea eliminar");
+        int empleadoAeliminarIngresadoPorUsuario=int.Parse(Console.ReadLine());
+
+        
+        listaEmpleados.RemoveAt((empleadoAeliminarIngresadoPorUsuario-1));
+        Console.WriteLine("Empleado eliminado con éxito");
+
+    }
 }
