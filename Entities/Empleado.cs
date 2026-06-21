@@ -25,4 +25,10 @@ public abstract class Empleado
         this.nombre=nombre;
     }
 
+
+    public virtual void MostrarDatosEmpleado()
+    {
+        Console.WriteLine($"El nombre del empleado es: {this.nombre}");
+    }
+
 }

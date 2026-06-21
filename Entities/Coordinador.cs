@@ -15,4 +15,11 @@ public class Coordinador:Empleado
         this.areaAsignada=areaAsignada;
         this.personasACargo=personasACargo;
     }
+
+    public override void MostrarDatosEmpleado()
+    {
+        base.MostrarDatosEmpleado();
+        Console.WriteLine($"Area asignada: {this.areaAsignada}");
+        Console.WriteLine($"Personas a cargo: {this.personasACargo}");
+    }
 }
