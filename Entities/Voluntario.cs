@@ -11,4 +11,11 @@ public class Voluntario : Empleado
     {
         this.horasTrabajadas=horasTrabajadas;
     }
+
+
+    public override void MostrarDatosEmpleado()
+    {
+        base.MostrarDatosEmpleado();
+        Console.WriteLine($"Horas trabajadas: {this.horasTrabajadas}");
+    }
 }
