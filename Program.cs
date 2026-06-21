@@ -94,4 +94,25 @@ public Voluntario(string nombre,int horasTrabajadas):base (nombre)
 
 
     }
+
+    static public void CrearCoordinador(){
+
+        Console.Clear();
+        Console.WriteLine("Has elegido la opción de crear Coordinador");
+
+        Console.WriteLine("Ingrese nombre");
+        string nombre =Console.ReadLine();
+
+
+        Console.WriteLine("Ingrese area asignada");
+        string area=Console.ReadLine();
+
+        Console.WriteLine("Ingrese personas a cargo");
+        int personasACargo=int.Parse(Console.ReadLine());
+
+        listaEmpleados.Add(new Coordinador(nombre,area,personasACargo));
+
+    }
+
+    
 }
