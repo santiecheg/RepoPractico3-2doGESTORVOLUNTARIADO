@@ -57,9 +57,10 @@ public class Program
                 case 3:
                     EliminarEmpleado();
                     break;
-/*
+
                 case 4:
-                    VerEmpleados();*/
+                    VerEmpleados();
+                    break;
 
                 case 5:
                     Console.WriteLine("Ha elegido salir, gracias por utilizar gestor de voluntariados gatito");
@@ -129,6 +130,19 @@ public Voluntario(string nombre,int horasTrabajadas):base (nombre)
         
         listaEmpleados.RemoveAt((empleadoAeliminarIngresadoPorUsuario-1));
         Console.WriteLine("Empleado eliminado con éxito");
+
+    }
+
+    static public void VerEmpleados(){
+
+        Console.WriteLine("\n =============================__=======================");
+        Console.WriteLine(" \n Opcion de reporte de empleados");
+        foreach (Empleado c in listaEmpleados){
+
+            Console.WriteLine("\n =============================__=======================");
+            c.MostrarDatosEmpleado();           
+
+        }
 
     }
 }
