@@ -73,8 +73,24 @@ public class Program
         }
     }
 
+/* 
+public Voluntario(string nombre,int horasTrabajadas):base (nombre)
+    {
+        this.horasTrabajadas=horasTrabajadas;
+    }
+*/
     static public void CrearVoluntario(){
 
+        Console.Clear();
+        Console.WriteLine("Has elegido la opción de crear Voluntario");
+
+        Console.WriteLine("Ingrese nombre");
+        string nombre =Console.ReadLine();
+
+        Console.WriteLine("Ingrese horas trabajadas");
+        int horasTrabajadas=int.Parse(Console.ReadLine());
+
+        listaEmpleados.Add(new Voluntario(nombre,horasTrabajadas));
 
 
     }
